@@ -1,0 +1,15 @@
+{
+  "run_id": "example-run-001",
+  "updated": "2026-11-23T12:00:00Z",
+  "stages": [
+    {"name": "discover", "status": "done", "items_in": 40, "items_out": 40, "note": "all shards listed in shards/discover.txt"},
+    {"name": "screen", "status": "done", "items_in": 40, "items_out": 31, "note": "9 dropped, reasons in logs/screen.json"},
+    {"name": "verify", "status": "partial", "items_in": 31, "items_out": 12, "note": "shard 3 of 5 unfinished"}
+  ],
+  "caps": {
+    "rounds": {"max": 3, "used": 1},
+    "secondary_loops": {"max": 2, "used": 0},
+    "chain_depth": {"max": 3, "used": 1},
+    "hops": {"max": 6, "used": 2}
+  }
+}

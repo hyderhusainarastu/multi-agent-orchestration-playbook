@@ -1,0 +1,10 @@
+{
+  "explorer_id": "explorer-B",
+  "method_name": "Portal facet search",
+  "hypothesis": "Municipal open-data portals tag library datasets consistently enough to find them by facet.",
+  "steps": ["List portals of 30 mid-size cities", "Filter by the 'libraries' category facet", "Keep datasets with a download link"],
+  "expected_recall": "medium",
+  "known_risks": ["Portals use different category names", "Some datasets sit under 'culture'"],
+  "cost": "small",
+  "red_team_notes": ["Facet names vary; add a synonym list"]
+}

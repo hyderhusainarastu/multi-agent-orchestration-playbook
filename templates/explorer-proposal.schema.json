@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Explorer proposal",
+  "type": "object",
+  "required": ["explorer_id", "method_name", "hypothesis", "steps", "expected_recall", "known_risks", "cost"],
+  "properties": {
+    "explorer_id": {"type": "string", "description": "Blind label, not the model name."},
+    "method_name": {"type": "string"},
+    "hypothesis": {"type": "string", "description": "Why this method should find the targets."},
+    "steps": {"type": "array", "items": {"type": "string"}},
+    "expected_recall": {"type": "string", "enum": ["low", "medium", "high"]},
+    "known_risks": {"type": "array", "items": {"type": "string"}},
+    "cost": {"type": "string", "enum": ["small", "medium", "large"]},
+    "red_team_notes": {"type": "array", "items": {"type": "string"}}
+  }
+}

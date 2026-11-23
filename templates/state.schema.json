@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Run state",
+  "type": "object",
+  "required": ["run_id", "stages", "caps"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "updated": {"type": "string"},
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "status", "items_in", "items_out"],
+        "properties": {
+          "name": {"type": "string"},
+          "status": {"type": "string", "enum": ["pending", "running", "partial", "done", "failed"]},
+          "items_in": {"type": "integer", "minimum": 0},
+          "items_out": {"type": "integer", "minimum": 0},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "caps": {
+      "type": "object",
+      "description": "name -> {max, used}. check_caps.py exits 3 when used >= max for any entry."
+    }
+  }
+}

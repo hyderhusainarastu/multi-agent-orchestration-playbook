@@ -1,0 +1,11 @@
+{
+  "method_name": "Portal facet search",
+  "gold_total": 10,
+  "gold_found": 7,
+  "negatives_total": 6,
+  "negatives_flagged": 1,
+  "gold_missed_ids": ["gold-04", "gold-08", "gold-09"],
+  "negatives_flagged_ids": ["neg-03"],
+  "skeptic_notes": ["Misses were all datasets filed under 'culture'; add that facet before scaling."],
+  "verdict": "revise"
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pilot scorecard",
+  "type": "object",
+  "required": ["method_name", "gold_total", "gold_found", "negatives_total", "negatives_flagged", "verdict"],
+  "properties": {
+    "method_name": {"type": "string"},
+    "gold_total": {"type": "integer", "minimum": 1},
+    "gold_found": {"type": "integer", "minimum": 0},
+    "negatives_total": {"type": "integer", "minimum": 0},
+    "negatives_flagged": {"type": "integer", "minimum": 0},
+    "gold_missed_ids": {"type": "array", "items": {"type": "string"}},
+    "negatives_flagged_ids": {"type": "array", "items": {"type": "string"}},
+    "skeptic_notes": {"type": "array", "items": {"type": "string"}},
+    "verdict": {"type": "string", "enum": ["scale", "revise", "drop"]}
+  }
+}
